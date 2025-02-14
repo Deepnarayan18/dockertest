@@ -59,4 +59,4 @@ jobs:
 
       - name: Image digest 
         id: build-push  # Added an ID to the build-push action
-        run: echo "Digest: ${{ steps.build-push.outputs.digest }}" # Referencing the action ID here
+        run: echo ${{ steps.build-and-publish.outputs.digest }} # Referencing the action ID here
